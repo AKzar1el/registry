@@ -1,0 +1,65 @@
+[tool]
+name = "mcp-geo"
+version = "0.3.2"
+description = "Self-hostable AI-search visibility MCP server for brand citations, history, competitors, content gaps, and scans across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews."
+author = "DigestSEO"
+homepage = "https://digestseo.com/geo-mcp/"
+repository = "https://github.com/AKzar1el/mcp-geo"
+license = "MIT"
+
+[binary]
+entry = "digestseo-mcp"
+platforms = ["darwin-arm64", "darwin-x64", "linux-x64", "windows-x64"]
+
+[runtime]
+transport = "stdio"
+
+[permissions]
+filesystem = ["read:~/.digestseo", "write:~/.digestseo"]
+network = ["https://api.openai.com", "https://api.anthropic.com", "https://generativelanguage.googleapis.com", "https://api.perplexity.ai", "https://serpapi.com"]
+allow_exec = false
+env_vars = ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "GEMINI_API_KEY", "PERPLEXITY_API_KEY", "SERPAPI_API_KEY", "DIGESTSEO_DB_PATH"]
+max_memory_mb = 512
+max_cpu_percent = 80
+
+[distribution]
+package = "npm:@digestseo/mcp-geo@0.3.2"
+install = "npx -y @digestseo/mcp-geo@0.3.2"
+binary_url = "https://www.npmjs.com/package/@digestseo/mcp-geo/v/0.3.2"
+sha512 = ""
+
+[[mcp.tools]]
+name = "check_visibility"
+description = "Get the latest stored AI visibility data for a tracked brand across configured engines."
+
+[[mcp.tools]]
+name = "get_visibility_history"
+description = "Get time-series AI visibility history for a tracked brand."
+
+[[mcp.tools]]
+name = "compare_competitors"
+description = "Compare a tracked brand's AI visibility and share of voice with competitors."
+
+[[mcp.tools]]
+name = "get_citations"
+description = "Return citation events where configured AI engines mention a tracked brand."
+
+[[mcp.tools]]
+name = "get_content_gaps"
+description = "Return prioritized content recommendations derived from AI visibility gaps."
+
+[[mcp.tools]]
+name = "refresh_brand"
+description = "Run a fresh AI visibility scan for a tracked brand using configured engines."
+
+[[mcp.tools]]
+name = "track_brand"
+description = "Create or update a tracked brand and its monitoring configuration."
+
+[[mcp.tools]]
+name = "list_brands"
+description = "List brands currently tracked by the local GEO data store."
+
+[[mcp.tools]]
+name = "generate_prompts"
+description = "Generate monitoring prompts for a tracked brand and its competitive category."
