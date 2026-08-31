@@ -1,0 +1,93 @@
+[tool]
+name = "mcp-trendpulse"
+version = "0.2.10"
+description = "Google News research and Google Trends analytics MCP server for article discovery, content extraction, trending terms, interest over time, regional interest, related queries, and topic analysis."
+author = "Tomi Šeregi"
+homepage = "https://github.com/AKzar1el/mcp-trendpulse"
+repository = "https://github.com/AKzar1el/mcp-trendpulse"
+license = "MIT"
+
+[binary]
+entry = "mcp-trendpulse"
+platforms = ["darwin-arm64", "darwin-x64", "linux-x64", "windows-x64"]
+
+[runtime]
+transport = "stdio"
+
+[permissions]
+filesystem = ["read:./.env"]
+network = true
+allow_exec = true
+env_vars = ["HTTP_PROXY", "HTTPS_PROXY", "GOOGLE_TRENDS_DELAY"]
+max_memory_mb = 1024
+max_cpu_percent = 80
+
+[distribution]
+package = "git+https://github.com/AKzar1el/mcp-trendpulse.git@43e3ec57bd90844922320a835d03de2d3ba3f049"
+install = "uvx --from git+https://github.com/AKzar1el/mcp-trendpulse.git@43e3ec57bd90844922320a835d03de2d3ba3f049 mcp-trendpulse"
+binary_url = "https://github.com/AKzar1el/mcp-trendpulse/tree/43e3ec57bd90844922320a835d03de2d3ba3f049"
+sha512 = ""
+
+[[mcp.tools]]
+name = "get_news_by_keyword"
+description = "Find recent Google News articles matching a keyword."
+
+[[mcp.tools]]
+name = "get_news_by_location"
+description = "Find recent Google News articles associated with a location."
+
+[[mcp.tools]]
+name = "get_news_by_topic"
+description = "Find recent Google News articles from a supported topic category."
+
+[[mcp.tools]]
+name = "get_top_news"
+description = "Return current top stories from Google News."
+
+[[mcp.tools]]
+name = "get_news_by_site"
+description = "Find recent Google News articles from a specified publisher domain."
+
+[[mcp.tools]]
+name = "get_article_content"
+description = "Download and parse article content from a public news URL."
+
+[[mcp.tools]]
+name = "get_trending_terms"
+description = "Return currently trending search terms for a geographic target."
+
+[[mcp.tools]]
+name = "get_trends"
+description = "Return Google Trends interest-over-time data for one or more keywords."
+
+[[mcp.tools]]
+name = "get_growth"
+description = "Measure search-interest growth over configured time windows."
+
+[[mcp.tools]]
+name = "get_ranked_trends"
+description = "Return ranked trending keywords using supported Google Trends data."
+
+[[mcp.tools]]
+name = "get_top_trends"
+description = "Return top trends from supported RSS trend feeds."
+
+[[mcp.tools]]
+name = "get_interest_by_region"
+description = "Return geographic interest data for one or more keywords."
+
+[[mcp.tools]]
+name = "get_related_queries"
+description = "Return Google Trends queries related to a keyword."
+
+[[mcp.tools]]
+name = "get_related_topics"
+description = "Return Google Trends topics related to a keyword."
+
+[[mcp.tools]]
+name = "get_suggestions"
+description = "Return Google Trends search suggestions for a term."
+
+[[mcp.tools]]
+name = "get_categories"
+description = "List Google Trends category identifiers available for filtering."
