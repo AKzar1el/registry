@@ -1,0 +1,57 @@
+[tool]
+name = "god-prompt-mcp"
+version = "1.0.2"
+description = "Local MCP server for GodPrompt software-engineering workflow guidance, including task routing, TDD, debugging protocols, verification gates, and progressive disclosure."
+author = "Tomi Šeregi"
+homepage = "https://tomiseregi.si/projects/god-prompt"
+repository = "https://github.com/AKzar1el/god-prompt-mcp"
+license = "MIT"
+
+[binary]
+entry = "god-prompt-mcp"
+platforms = ["darwin-arm64", "darwin-x64", "linux-x64", "windows-x64"]
+
+[runtime]
+transport = "stdio"
+
+[permissions]
+filesystem = false
+network = false
+allow_exec = false
+env_vars = []
+max_memory_mb = 256
+max_cpu_percent = 50
+
+[distribution]
+package = "github:AKzar1el/god-prompt-mcp#90a78922ae6ee06289e47b27f1e5ecbd4cd55322"
+install = "npx -y github:AKzar1el/god-prompt-mcp#90a78922ae6ee06289e47b27f1e5ecbd4cd55322"
+binary_url = "https://github.com/AKzar1el/god-prompt-mcp/releases/download/v1.0.2/god-prompt-mcp-1.0.2.mcpb"
+sha512 = ""
+
+[[mcp.tools]]
+name = "get_god_prompt"
+description = "Return the complete bundled GodPrompt single-file payload."
+
+[[mcp.tools]]
+name = "get_core_skill"
+description = "Return the bundled GodPrompt core skill and universal execution protocol."
+
+[[mcp.tools]]
+name = "get_protocols"
+description = "Return the bundled deep execution protocols for supported software-engineering task types."
+
+[[mcp.tools]]
+name = "get_gates"
+description = "Return the bundled verification checklists and completion gates."
+
+[[mcp.tools]]
+name = "get_anti_patterns"
+description = "Return the bundled anti-patterns, red flags, and recovery guidance."
+
+[[mcp.tools]]
+name = "classify_task"
+description = "Classify a supplied task into a GodPrompt task type for workflow routing."
+
+[[mcp.tools]]
+name = "get_version"
+description = "Return GodPrompt version information and MCP server metadata."
