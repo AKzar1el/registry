@@ -1,0 +1,95 @@
+[tool]
+name = "mcp-gsc"
+version = "0.3.2-registry.1"
+description = "Hosted Google Search Console MCP server for search analytics, URL inspection, sitemaps, indexing operations, SEO diagnostics, comparisons, and weekly reporting."
+author = "DigestSEO"
+homepage = "https://digestseo.com/gsc-mcp/"
+repository = "https://github.com/AKzar1el/mcp-gsc"
+license = "MIT"
+
+[binary]
+entry = "https://mcp-gsc.digestseo.com/mcp"
+platforms = ["remote-http"]
+
+[runtime]
+transport = "streamable-http"
+
+[permissions]
+filesystem = false
+network = ["https://mcp-gsc.digestseo.com"]
+allow_exec = false
+env_vars = []
+max_memory_mb = 256
+max_cpu_percent = 50
+
+[distribution]
+binary_url = "https://mcp-gsc.digestseo.com/mcp"
+sha512 = ""
+
+[[mcp.tools]]
+name = "server.capabilities"
+description = "List the server tools and report whether the Google connection is authenticated."
+
+[[mcp.tools]]
+name = "sites.list"
+description = "List Search Console properties available to the connected Google account."
+
+[[mcp.tools]]
+name = "analytics.query"
+description = "Query impressions, clicks, click-through rate, and average position over a date range."
+
+[[mcp.tools]]
+name = "urls.inspect"
+description = "Get Google URL Inspection data for a single page, including index status and crawl information."
+
+[[mcp.tools]]
+name = "sitemaps.list"
+description = "List submitted sitemaps for a Search Console property with status and issue counts."
+
+[[mcp.tools]]
+name = "sites.add"
+description = "Add a website property to the connected Google Search Console account."
+
+[[mcp.tools]]
+name = "sites.delete"
+description = "Remove a website property from the connected Google Search Console account."
+
+[[mcp.tools]]
+name = "sitemaps.submit"
+description = "Submit a sitemap to Google Search Console."
+
+[[mcp.tools]]
+name = "sitemaps.delete"
+description = "Remove a submitted sitemap from Google Search Console."
+
+[[mcp.tools]]
+name = "sitemaps.get"
+description = "Get status and details for one submitted sitemap."
+
+[[mcp.tools]]
+name = "insights.quick_wins"
+description = "Find high-impression queries with actionable ranking and click-through-rate opportunities."
+
+[[mcp.tools]]
+name = "insights.cannibalization"
+description = "Find queries where multiple pages compete for Search Console visibility."
+
+[[mcp.tools]]
+name = "insights.content_decay"
+description = "Compare contiguous periods to identify pages with the largest search-click declines."
+
+[[mcp.tools]]
+name = "indexing.request"
+description = "Request indexing or an update for an eligible URL through the Google Indexing API."
+
+[[mcp.tools]]
+name = "indexing.list_pages"
+description = "List pages with search impressions as a practical proxy for indexed pages."
+
+[[mcp.tools]]
+name = "analytics.compare"
+description = "Compare Search Console metrics between two date ranges by query, page, country, or device."
+
+[[mcp.tools]]
+name = "reports.weekly_digest"
+description = "Generate a weekly SEO report with movers, top pages, and a recommended action."
