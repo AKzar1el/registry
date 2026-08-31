@@ -1,6 +1,6 @@
 [tool]
 name = "mcp-trendpulse"
-version = "0.2.10"
+version = "0.2.11"
 description = "Google News research and Google Trends analytics MCP server for article discovery, content extraction, trending terms, interest over time, regional interest, related queries, and topic analysis."
 author = "Tomi Šeregi"
 homepage = "https://github.com/AKzar1el/mcp-trendpulse"
@@ -23,9 +23,9 @@ max_memory_mb = 1024
 max_cpu_percent = 80
 
 [distribution]
-package = "git+https://github.com/AKzar1el/mcp-trendpulse.git@43e3ec57bd90844922320a835d03de2d3ba3f049"
-install = "uvx --from git+https://github.com/AKzar1el/mcp-trendpulse.git@43e3ec57bd90844922320a835d03de2d3ba3f049 mcp-trendpulse"
-binary_url = "https://github.com/AKzar1el/mcp-trendpulse/tree/43e3ec57bd90844922320a835d03de2d3ba3f049"
+package = "git+https://github.com/AKzar1el/mcp-trendpulse.git@e63ec85893c81aab6faef2dba9ff7080d27a948b"
+install = "uvx --from git+https://github.com/AKzar1el/mcp-trendpulse.git@e63ec85893c81aab6faef2dba9ff7080d27a948b mcp-trendpulse"
+binary_url = "https://github.com/AKzar1el/mcp-trendpulse/tree/e63ec85893c81aab6faef2dba9ff7080d27a948b"
 sha512 = ""
 
 [[mcp.tools]]
