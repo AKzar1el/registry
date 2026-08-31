@@ -1,0 +1,61 @@
+[tool]
+name = "mcp-web-validator"
+version = "1.1.0"
+description = "W3C HTML/CSS validation and technical SEO auditing MCP server with metadata, JSON-LD, link, report, and responsive screenshot tools."
+author = "DigestSEO"
+homepage = "https://digestseo.com/validator-mcp/"
+repository = "https://github.com/AKzar1el/mcp-web-validator"
+license = "MIT"
+
+[binary]
+entry = "mcp-web-validator"
+platforms = ["darwin-arm64", "darwin-x64", "linux-x64", "windows-x64"]
+
+[runtime]
+transport = "stdio"
+
+[permissions]
+filesystem = ["read:~/", "read:./"]
+network = true
+allow_exec = true
+env_vars = []
+max_memory_mb = 1024
+max_cpu_percent = 80
+
+[distribution]
+package = "npm:mcp-web-validator@1.1.0"
+install = "npx -y mcp-web-validator@1.1.0"
+binary_url = "https://www.npmjs.com/package/mcp-web-validator/v/1.1.0"
+sha512 = ""
+
+[[mcp.tools]]
+name = "html.local"
+description = "Validate a bounded local HTML file with the W3C Nu HTML Checker."
+
+[[mcp.tools]]
+name = "html.url"
+description = "Fetch and validate a bounded public HTTP or HTTPS page with the W3C Nu HTML Checker."
+
+[[mcp.tools]]
+name = "css.local"
+description = "Validate a bounded local CSS file with the W3C Jigsaw CSS Validator."
+
+[[mcp.tools]]
+name = "seo.metadata"
+description = "Audit supplied HTML for technical SEO metadata, headings, viewport configuration, image alternatives, and Open Graph fields."
+
+[[mcp.tools]]
+name = "links.broken"
+description = "Resolve and check a bounded set of public HTTP or HTTPS links found in supplied HTML."
+
+[[mcp.tools]]
+name = "schema.markup"
+description = "Parse JSON-LD blocks in supplied HTML and report syntax errors or empty blocks."
+
+[[mcp.tools]]
+name = "report.validation"
+description = "Generate a combined HTML, CSS, SEO, accessibility, JSON-LD, and public-link validation report."
+
+[[mcp.tools]]
+name = "screenshot.capture"
+description = "Capture bounded responsive screenshots of an authorized public webpage."
