@@ -2,7 +2,7 @@
 name = "god-prompt-mcp"
 version = "1.0.15"
 description = "Local MCP server for GodPrompt software-engineering workflow guidance, including task routing, TDD, debugging protocols, verification gates, and progressive disclosure."
-author = "Tomi ┼áeregi"
+author = "Tomi Šeregi"
 homepage = "https://tomiseregi.si/projects/god-prompt"
 repository = "https://github.com/AKzar1el/god-prompt-mcp"
 license = "MIT"
