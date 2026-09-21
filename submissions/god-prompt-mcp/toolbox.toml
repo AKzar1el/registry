@@ -1,6 +1,6 @@
 [tool]
 name = "god-prompt-mcp"
-version = "1.0.15"
+version = "1.0.16"
 description = "Local MCP server for GodPrompt software-engineering workflow guidance, including task routing, TDD, debugging protocols, verification gates, and progressive disclosure."
 author = "Tomi Šeregi"
 homepage = "https://tomiseregi.si/projects/god-prompt"
@@ -23,9 +23,9 @@ max_memory_mb = 256
 max_cpu_percent = 50
 
 [distribution]
-package = "github:AKzar1el/god-prompt-mcp#62d5d622d3e82a1a5920068ec1cd6dab91b083e5"
-install = "npx -y github:AKzar1el/god-prompt-mcp#62d5d622d3e82a1a5920068ec1cd6dab91b083e5"
-binary_url = "https://github.com/AKzar1el/god-prompt-mcp/releases/download/v1.0.15/god-prompt-mcp-1.0.15.mcpb"
+package = "github:AKzar1el/god-prompt-mcp#07d4a65397e1e0f37aceb031f699adde474a31cd"
+install = "npx -y github:AKzar1el/god-prompt-mcp#07d4a65397e1e0f37aceb031f699adde474a31cd"
+binary_url = "https://github.com/AKzar1el/god-prompt-mcp/releases/download/v1.0.16/god-prompt-mcp-1.0.16.mcpb"
 sha512 = ""
 
 [[mcp.tools]]
