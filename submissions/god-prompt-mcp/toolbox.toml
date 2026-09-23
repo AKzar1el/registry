@@ -1,6 +1,6 @@
 [tool]
 name = "god-prompt-mcp"
-version = "1.0.25"
+version = "1.0.26"
 description = "Local MCP server for GodPrompt software-engineering workflow guidance, including task routing, TDD, debugging protocols, verification gates, and progressive disclosure."
 author = "Tomi Šeregi"
 homepage = "https://tomiseregi.si/projects/god-prompt"
@@ -23,9 +23,9 @@ max_memory_mb = 256
 max_cpu_percent = 50
 
 [distribution]
-package = "github:AKzar1el/god-prompt-mcp#ec060959cfef145b9b25d7c4caf437659c346400"
-install = "npx -y github:AKzar1el/god-prompt-mcp#ec060959cfef145b9b25d7c4caf437659c346400"
-binary_url = "https://github.com/AKzar1el/god-prompt-mcp/releases/download/v1.0.25/god-prompt-mcp-1.0.25.mcpb"
+package = "github:AKzar1el/god-prompt-mcp#7cb4c987c428fb19bee7e4a61581d6d00b2657ba"
+install = "npx -y github:AKzar1el/god-prompt-mcp#7cb4c987c428fb19bee7e4a61581d6d00b2657ba"
+binary_url = "https://github.com/AKzar1el/god-prompt-mcp/releases/download/v1.0.26/god-prompt-mcp-1.0.26.mcpb"
 sha512 = ""
 
 [[mcp.tools]]
@@ -50,8 +50,8 @@ description = "Return the bundled anti-patterns, red flags, and recovery guidanc
 
 [[mcp.tools]]
 name = "classify_task"
-description = "Classify a supplied task into a GodPrompt task type for workflow routing."
+description = "Classify one concrete software-development task into one of GodPrompt's 9 task types (BUILD, DEBUG, REFACTOR, CONTENT, DESIGN, SHIP, ANALYZE, AUTOMATE, PLAN), or UNCLASSIFIED when no reliable route is detected. Returns JSON with task_type, deterministic confidence, protocol, matched_signals, alternative_task_types, ambiguous, and recommendation; use it for routing before loading detailed workflow text."
 
 [[mcp.tools]]
 name = "get_version"
-description = "Return GodPrompt version information and MCP server metadata."
+description = "Returns JSON with the GodPrompt content version, MCP server version, repository, bundled file sizes and purposes, and task-type/protocol catalog. Use it to verify which GodPrompt content/server version a client is connected to; use the content retrieval tools when you need the actual workflow text."
